@@ -12,12 +12,99 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .header {
-  background-color: antiquewhite;
+  background-color: white;
   grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 8px 22px;
+  gap: 15px;
+}
+
+.header .header-top {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.header-top ul.search-container {
+  display: grid;
+  grid-template-columns: 40px minmax(50%, 500px);
+  gap: 8px;
+  text-align: center;
+  align-items: center;
+}
+
+ul.search-container .search-bar {
+  height: 1.5rem;
+  background-color: #eee;
+  border-radius: 8px;
+}
+
+ul.search-container .search-icon {
+  font-size: 14px;
+}
+
+.header-top ul.notification-container {
+  display: grid;
+  grid-template-columns: 10% 35px 50%;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+ul.notification-container .user-pic img {
+  width: 100%;
+}
+
+ul.notification-container .user-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.header .header-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.header-bottom .user-info-container {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info-container .user-img {
+  width: 100%;
+}
+
+.user-info-container .welcome-message > div:first-child {
+  font-size: 0.7rem;
+  margin-bottom: 6px;
+}
+
+.user-info-container .welcome-message > div:last-child {
+  font-weight: 600;
+}
+
+.header-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 100px));
+  gap: 20px;
+  justify-content: center;
+}
+
+.header-buttons button {
+  border: none;
+  border-radius: 16px;
+  padding: 6px 18px;
+  background-color: #6498fa;
+  color: white;
 }
 
 .side-bar {
