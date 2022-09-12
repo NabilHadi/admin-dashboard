@@ -29,12 +29,17 @@ img {
   grid-template-columns: 3fr 1fr;
 }
 
+.header-top .search-input-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-top input {
   margin-left: 10px;
   width: 70%;
   border: none;
   background-color: #e2e8f0;
-  padding: 3px 4px;
+  padding: 6px 4px;
   border-radius: 10px;
 }
 
@@ -165,6 +170,10 @@ img {
   margin-top: auto;
 }
 
+.project-card .card-icons .svg-container {
+  margin-right: 14px;
+}
+
 .announcements-container {
   margin-bottom: 1rem;
 }
@@ -193,8 +202,13 @@ img {
   display: grid;
   grid-template-columns: 40px 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 8px;
+  gap: 0 8px;
   flex: 1;
+}
+
+.trending-container .trending-project .project {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 .trending-container .trending-project img {
