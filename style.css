@@ -5,6 +5,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 .container {
   height: 100%;
   display: grid;
@@ -13,15 +17,14 @@ body {
 }
 
 .header {
-  border: 1px solid rebeccapurple;
   grid-column: 2 / 3;
   display: grid;
   grid-template-rows: 60px 1fr;
   padding: 16px 25px;
+  box-shadow: 0px 7px 8px 0px rgb(160, 160, 160);
 }
 
 .header-top {
-  border: 1px slateblue solid;
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
@@ -30,20 +33,22 @@ body {
   margin-left: 10px;
   width: 70%;
   border: none;
-  background-color: lightgrey;
+  background-color: #e2e8f0;
   padding: 3px 4px;
   border-radius: 10px;
 }
 
 .header-top ul.profile-icons {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 40px 2fr;
   font-size: 0.8rem;
   font-weight: 500;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
 }
 
 .header-bottom {
-  border: 1px green solid;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -51,8 +56,12 @@ body {
 
 .header-bottom .account-container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 60px 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 0 8px;
+}
+
+.header-bottom .account-container img {
 }
 
 .header-bottom .account-container .account-name {
@@ -105,5 +114,89 @@ body {
 }
 
 .main {
-  border: 1px solid gold;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 30px 1fr 30px 1fr;
+  padding: 1rem;
+  gap: 0 1rem;
+  background-color: #e2e8f0;
+}
+
+.projects-title,
+.announcements-title,
+.trending-title {
+  font-weight: 600;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.projects-container {
+  grid-column: 1/2;
+  grid-row: 2/5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.projects-container .project-card {
+  border-left: 5px solid #f0b429;
+  position: relative;
+}
+
+.project-card .project-name {
+  font-weight: 600;
+}
+
+.project-card .project-desc {
+  opacity: 0.8;
+}
+
+.project-card .card-icons {
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.announcements-container {
+  margin-bottom: 1rem;
+}
+
+.announcements-container .announcement {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+  flex: 1;
+}
+
+.announcements-container .announcement:last-child {
+  border-bottom: none;
+}
+
+.announcements-container .announcement .title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.announcements-container .announcement .desc {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.trending-container .trending-project {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  flex: 1;
+}
+
+.trending-container .trending-project img {
+  grid-row: 1/3;
 }
